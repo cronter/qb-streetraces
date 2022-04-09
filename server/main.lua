@@ -47,7 +47,7 @@ RegisterNetEvent('qb-streetraces:JoinRace', function(RaceId)
     end
 end)
 
-QBCore.Commands.Add("createrace", "Start A Street Race", {{name="amount", help="The Stake Amount For The Race."}}, false, function(source, args)
+QBCore.Commands.Add("race", "Start A Street Race", {{name="amount", help="The Stake Amount For The Race."}}, false, function(source, args)
     local src = source
     local amount = tonumber(args[1])
     if GetJoinedRace(QBCore.Functions.GetIdentifier(src, 'license')) == 0 then
